@@ -1,0 +1,265 @@
+# what is SQL  ?
+
+  1. SQL stands for structured query language
+  2. SQL case insenstive language
+     examples : INSERT or insert or Insert
+  3. sql is used to create an structured of tables or database  
+  4. sql is used to create database or tables and manupulate data 
+  5. SQL create structures or manipulate data in table 
+  6. SQL is maximum create 1032 columns 
+  7. SQL is faster to create structured data or insert data or delete data or update data 
+ 
+
+# employee details table with columnname id, name , email , address , mobile etc
+
+**employee**
+
+| ID  | Name           | Email                     | Phone        | Address                     | Salary |
+|-----|----------------|---------------------------|--------------|-----------------------------|--------|
+| 101 | John Doe       | john.doe@example.com      | 9876543210   | 12 Main St, New York        | 55000  |
+| 102 | Sarah Smith    | sarah.smith@example.com   | 9123456780   | 45 Oak Ave, Chicago         | 62000  |
+| 103 | Michael Brown  | michael.brown@example.com | 9988776655   | 78 Pine Rd, California      | 58000  |
+| 104 | Emily Johnson  | emily.johnson@example.com | 9012345678   | 23 Lake View, Texas         | 64000  |
+| 105 | David Wilson   | david.wilson@example.com  | 9090909090   | 56 Hill St, Florida         | 60000  |
+
+
+# types of  SQL query or commands
+
+  1. DDL (data definition language)
+  2. DML (data manipulate language)
+  3. DQL (data query language)
+  4. TCL (transanctional query language)
+
+
+# what is DDL ....  Data definition language
+
+  1. stands for data definition language 
+  2. DDL used to create database and table structures 
+  3. DDL is also used to drop & alter the database structures and tables data
+
+  **List of command or query in DDL**
+
+  1. create (create database or tables structures)
+  2. alter  (alter used to add | modify  | rename  new  column after create tables)
+  3. drop
+  4. rename
+  5. change 
+  6. truncate
+
+  **How to create database**
+
+  ```
+  syntax ..
+  create database databasename
+  examples : 
+  create database data_analytics
+  ```  
+
+  **How to create a table**
+  
+  **create columnname in tables fixed data-type**
+
+  1. char .....accept character values size(0-255)
+  2. varchar .....accept character and numbers both values size(0-255)
+  3. int..........accept numbers only default size(0-11)
+  4. bigint ......accept more than 11 number default size(0-20)
+  5. text.........accept more than 65365 character  
+  6. enum .........enumerated accept multiple choices values
+  7. date...........accept date formate 
+  8. datatime........accept datetime both
+  9. float...........accept decimal values 
+  10. money..........accept price & all   
+  
+ **syntax to create table** 
+
+  ```
+  create table tablename
+  (
+  columnname datatype(size) primary key auto_increment,
+  columname datatype(size),
+  .
+  .
+  .
+  .
+  .
+  columnname datatype(size)
+
+  );
+
+  ```
+  
+  **examples of create table***
+
+  ```
+  create table employee
+(
+empid int primary key AUTO_INCREMENT,
+name varchar(100),
+email varchar(255),
+password varchar(255),
+address text,
+phone bigint,
+picode int,
+salary float    
+)
+
+```
+
+```
+create table country
+(
+cid int primary key AUTO_INCREMENT,
+countryname varchar(255),
+added_date varchar(255)    
+
+)
+
+```
+
+```
+create table feedback
+(
+id int primary key AUTO_INCREMENT,
+name varchar(255),
+email varchar(255),
+phone bigint,
+rating varchar(255),
+comment text,
+added_date date    
+)
+
+```
+
+
+ **alter**
+
+1. alter : (alter used to add | modify  | rename | drop  a   column after create tables)
+
+```
+add new column...
+
+1. alter table employee add added_date date;
+2. alter table employee add country varchar(155);
+3. alter table employee add photo varchar(255) after empid;
+
+rename any columns 
+
+1. alter table employee change salary employee_salary varchar(255);
+2. alter table employee change photo employee_image varchar(255);
+
+delete any columns 
+
+1. alter table employee drop added_date;
+
+```
+
+**drop database & table structured**
+
+```
+delete a database and table structured after drop we can not rollback
+
+```
+
+**drop database**
+
+```
+
+drop database databasename
+or
+drop database data_analytics
+
+```
+
+**drop table only**
+
+```
+drop a table it is drop or delete permanently after drop we can not rollback a data or structured of table
+
+drop table tablename
+or
+drop table country
+
+```
+
+**truncate**
+
+```
+truncate delete data or cleared data from table 
+after truncate we can not rollback or undo the data 
+after truncate it cleared all data 
+truncate can not effects on structured its only delete data
+
+syntax ..
+truncate table tablename
+or
+truncate table reviews
+
+```
+
+**rename**
+
+```
+rename is used to rename the table
+syntax :
+rename table tablename to newtablename
+or
+rename table employee to tbl_employee
+or
+rename table reviews to tbl_reviews
+```
+
+
+**change**
+
+```
+change is used to change any columname in table 
+syntax :
+alter table tablename change columnname newcolumnname datatype(size);
+or
+alter table tbl_employee change password employee_password varchar(255);
+```
+
+
+
+# what is DML ....  Data manipulation language
+
+  1. stands for data manipulation language 
+  2. DML used to manipulate data meanse insert | delete | update data in tables 
+  3. DML data 
+
+     a. insert 
+     b. delete 
+     c. update 
+
+**how to insert a single or multiple data in tables**
+
+1. insert a single row in table
+
+   ```
+   syntax :
+
+   insert into tablename(columnname1, columnname2) values ('value1','value2');
+   or
+
+   insert into tbl_reviews(name,email,phone,rating,comment,added_date) values ('om','om@gmail.com',91212121,'5 star','good i am glad to here','19-05-2026') 
+
+   ```
+
+
+   2. insert a multiple rows in table
+
+   ```
+   syntax :
+
+   insert into tablename(columnname1, columnname2) values ('value1','value2'),('value1','value2'),('value1','value2');
+   or
+   
+   insert into tbl_reviews(name,email,phone,rating,comment,added_date) values ('amish','amish@gmail.com',91212178,'5 star','good i am glad to here','2026-05-19'),('kirtan','kirtan@gmail.com',93212178,'5 star','good i am glad to here','2026-05-19'),('mahesh','mahesh@gmail.com',95212178,'5 star','good i am glad to here','2026-05-19') 
+
+   or
+
+  insert into tbl_reviews values('null','naimish','naimish@gmail.com',91212178,'5 star','good i am glad to here','2026-05-19'),('null','ritesh','ritesh@gmail.com',93212178,'5 star','good i am glad to here','2026-05-19'),('null','kumar','kumar@gmail.com',95212178,'5 star','good i am glad to here','2026-05-19')
+
+   ```
+
+   

@@ -1,0 +1,5 @@
+# What is the W3C ?
+
+The World Wide Web Consortium (W3C) is an international community that develops open standards to ensure the long-term growth of the Web. Founded in 1994 by Tim Berners-Lee, the inventor of the World Wide Web, W3C's mission is to lead the Web to its full potential by developing protocols and guidelines that ensure the Web remains open, accessible, and interoperable for everyone.
+
+2. W3C is responsible for creating and maintaining a wide range of web standards, including HTML, CSS, XML, and many others. These standards are developed through a collaborative process that involves input from industry experts, researchers, and the public. By establishing these standards, W3C helps to ensure that web technologies work together seamlessly across different platforms and devices, fostering innovation and enabling a rich user experience on the Web.

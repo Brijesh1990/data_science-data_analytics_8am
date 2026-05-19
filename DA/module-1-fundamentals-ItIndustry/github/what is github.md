@@ -23,17 +23,20 @@
 
      or
   
-  5. using command to upload data 
+  5. using command to upload data download git software 
+
+  6. https://git-scm.com/install/windows
+   
 
   ```
-  git init
+  1. git init
   
-  git add .
+  2. git add .
   
-  git commit -m "first commit"
+  3. git commit -m "first commit"
   
-  git remote add origin https://github.com/Brijesh1990/data_science-data_analytics_8am.git
+  4. git remote add origin https://github.com/Brijesh1990/data_science-data_analytics_8am.git
   
-  git push -u origin main
+  5. git push -u origin main
 
   ```         
