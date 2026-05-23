@@ -262,4 +262,80 @@ alter table tbl_employee change password employee_password varchar(255);
 
    ```
 
-   
+# how to delete data 
+
+  1. delete data is used to delete a data 
+  2. delete is also used to delete a particular one rows 
+  3. delete is also used to delete with its columnname 
+  4. delete is also used to delete a range of data 
+  5. delete is also used to delete alternate data 
+
+ **examples of delete**
+
+  ```
+  delete from tablename
+  or 
+  delete from tbl_reviews
+  or 
+  delete from tbl_reviews where id=5;
+  or
+  delete from tbl_reviews where name='om';
+  or
+  delete from tbl_reviews where id between 5 and 10;
+  or
+  delete from tbl_reviews where id in(12,14,16,19)
+  ```   
+
+# how to delete data or rows 
+
+  1. update a rows ...
+
+  ```
+   update tablename set colunname='value' where id;
+   or
+   update tbl_reviews set name='om',email='om007@gmail.com',phone=635898956,rating='5star',comment='good to see you',added_date='2026-05-21' where id=17;
+   or
+   update tbl_reviews set name='om',email='om007@gmail.com',phone=635898956,rating='5star',comment='good to see you',added_date='2026-05-21' where id=17;
+
+   or
+
+   update tbl_reviews set email='bkpandey.pandey@gmail.com' where id=1;
+
+   or
+
+   update tbl_reviews set email='bkpandey.pandey@gmail.com' where id=1;
+
+   or
+
+   update tbl_reviews set email='mukeshdhandhukiya007@gmail.com' where name='mukesh';   
+
+  ```
+  # DQL ..stands for data query language 
+
+  1. DQL stands data query language 
+  2. DQL is used to select or fetch data 
+  3. DQL is only used select query or command
+
+  **select examples**
+
+  ```
+  select * from tbl_reviews;
+  or
+  select * from tbl_reviews id=1;
+  or
+  select * from tbl_reviews where id=1;
+  or
+  select * from tbl_reviews where between 18 and 25;
+  or
+  select * from tbl_reviews where id in(13,17,20);
+  or
+  select id,name,email,phone from tbl_reviews;
+  or
+  select * from tbl_reviews where id limit 1,6;
+  or
+  select * from tbl_reviews order by name asc
+  or
+  select * from tbl_reviews order by name desc
+  
+  ```
+
