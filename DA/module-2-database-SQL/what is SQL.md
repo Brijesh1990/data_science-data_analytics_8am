@@ -1154,7 +1154,154 @@ departmentid int REFERENCES tbl_department(departmentid)
         ```
 
 
-# SQL windows functions ..........
+# SQL windows functions .....
 
-  1. SQL windows function are used to applied just like scalar or aggrigate functions on windows in SQL.
-  
+1. SQL windows functions is used to applied calculation | add unique rows to current rows in a tables 
+
+2. SQL windows functions are used to add or set a rows related to the current row without grouping the result into a single row 
+
+
+# types of  windows functions 
+
+1. ROW_NUMBER()
+
+2. RANK()
+
+3. DENSE_RANK()
+
+4. NTILE()
+
+5. LAG()
+
+6. LEAD()
+
+7. FIRST_VALUE()
+
+8. LAST_VALUE()
+
+9. SUM() OVER()
+
+10. AVG() OVER()
+
+11. MIN() OVER()
+
+12) MAX() OVER()
+
+13) COUNT() OVER()
+
+
+
+# create a tables employee ....  
+
+1. create table name with flip_employee
+
+2. ROW_NUMBER(): assingns a unique number to each rows 
+
+```
+select name , salary , ROW_NUMBER() OVER(order by salary desc) from flip_employee  
+
+```
+
+3. RANK() : provides ranking with gaps for dublicate values 
+
+```
+select name, salary, RANK() OVER(order by salary desc) as rank_no from employee;  
+```
+
+4. DENSE_RANK() : provides ranking without gaps for dublicate values 
+
+```
+select name, salary, DENSE_RANK() OVER(order by salary desc) as rank_no from employee;
+
+```
+
+5. NTILE() : divides rows into equal group 
+
+``` 
+select name, salary, NTILE(3) OVER(order by salary desc) as group_no from flip_employee;
+```
+
+6. LAG() : return previous rows values 
+
+```
+select name, salary , LAG(salary, 1) OVER(order by salary desc) as prevoius_salary from flip_employee; 
+``` 
+
+7. LEAD() : return next row value 
+
+```
+select name, salary , LEAD(salary, 1) OVER(order by salary desc) as prevoius_salary from flip_employee;   
+
+```
+
+8. FIRST_VALUES() : return first values in windows 
+
+```
+select name, salary , FIRST_VALUE(salary) OVER(order by salary desc) as first_max_salary from flip_employee; 
+``` 
+
+
+
+8. LAST_VALUES() : return last values in windows 
+
+```
+select name, salary , LAST_VALUE(salary) OVER(order by salary desc) as LAST_VALUES_SALARY from flip_employee; 
+
+``` 
+
+9. SUM() : running with total in windows 
+
+```
+select name, salary , SUM(salary) OVER(order by salary) as total_sum_SALARY from flip_employee; 
+
+```
+
+
+9. AVG() : running with avg in windows 
+
+```
+select name, salary , AVG(salary) OVER(order by salary) as average_salary from flip_employee; 
+
+```
+
+10. MIN() OVER(): minimum values in windows
+
+```
+select name, salary , MIN(salary) OVER(order by salary) as MIN_SALARY from flip_employee;      
+
+```
+
+
+10. MAX() OVER(): maximum values in windows
+
+```
+select name, salary , MAX(salary) OVER(order by salary) as MAX_SALARY from flip_employee;      
+
+```
+
+11) COUNT() OVER() : count rows of windows
+
+```
+select name, salary , COUNT(empid) OVER(order by empid) as COUNT_EMPLOYEE from flip_employee;    
+```    
+
+# SQL WITH Clause
+
+1. The SQL WITH clause (Common Table Expression or CTE) defines a temporary result set that can be used within a query. 
+2. It simplifies complex SQL statements, making them easier to read, manage and reuse. 
+
+```
+WITH AvgSalaryCTE (averageValue) AS (
+SELECT AVG(Salary)
+FROM flip_employee
+)
+SELECT 
+empid,
+name, 
+salary 
+FROM 
+flip_employee 
+WHERE 
+Salary > (SELECT averageValue FROM AvgSalaryCTE);
+
+```      
