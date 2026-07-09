@@ -23,6 +23,7 @@ A variables stored an information about data i.e called variables
      name="brijesh"
      _name="rajesh"
      abc=10.6956565
+     # wrong way    
      pass=10.6565
    
 """
@@ -30,5 +31,8 @@ A variables stored an information about data i.e called variables
 # pass=10.6565
 # print(pass)
 
-pa="brijesh kumar"
-print(pa)
+# pa="brijesh kumar"
+# print(pa)
+
+import keyword
+print(keyword.kwlist)
