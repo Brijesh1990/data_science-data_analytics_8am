@@ -1293,14 +1293,14 @@ select name, salary , COUNT(empid) OVER(order by empid) as COUNT_EMPLOYEE from f
 ```
 WITH AvgSalaryCTE (averageValue) AS (
 SELECT AVG(Salary)
-FROM flip_employee
+FROM tbl_employee
 )
 SELECT 
 empid,
 name, 
 salary 
 FROM 
-flip_employee 
+tbl_employee 
 WHERE 
 Salary > (SELECT averageValue FROM AvgSalaryCTE);
 
