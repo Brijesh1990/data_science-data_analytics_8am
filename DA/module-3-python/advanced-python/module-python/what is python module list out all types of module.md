@@ -1,7 +1,7 @@
 # what is python module list out all types of module ?
 
 1. A Python module is a file containing Python code, such as functions, classes, and variables, that can be imported into other Python programs.
-2. A module is save with .py 
+2. A module is save with .py or a small peace of .py file i.e called module
 3. A module is also imported into other python programmes 
 4. A module is re-used one module to another by **import** keyword
 
