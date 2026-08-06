@@ -10,7 +10,16 @@
 #     print(i)
 
 # numbers of iteration skip
-for i in range(1,101):
-    if i==10 or i==20 or i==30:
-        continue
-    print(i)
+# for i in range(1,101):
+#     if i==10 or i==20 or i==30:
+#         continue
+#     print(i)
+
+
+# return 
+# return always return a single values 
+def display(a,b):
+    return a+b #terminate 
+
+print(display(10,20))
+
