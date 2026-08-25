@@ -1,0 +1,3 @@
+
+ with is method to open file and create an alias of file
+ with is used in file handling to create open any file
