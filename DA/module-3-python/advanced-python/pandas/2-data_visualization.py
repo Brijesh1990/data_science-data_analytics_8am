@@ -40,13 +40,13 @@ df[["name", "salary"]].to_excel("employee.xlsx", index=False)
 print("Excel generated successfully")
 
 # bar chart
-plt.title("Display data in  bar chart")
-plt.bar(df["name"],df["salary"])
-# print chart
-plt.show()
-
-# pie chart
-# plt.title("Display data in  pie chart")
-# plt.pie(df["salary"],labels=df["name"], autopct="%1.1f%%")
+# plt.title("Display data in  bar chart")
+# plt.bar(df["name"],df["salary"])
 # # print chart
 # plt.show()
+
+# pie chart
+plt.title("Display data in  pie chart")
+plt.pie(df["salary"],labels=df["name"], autopct="%1.1f%%")
+# print chart
+plt.show()
