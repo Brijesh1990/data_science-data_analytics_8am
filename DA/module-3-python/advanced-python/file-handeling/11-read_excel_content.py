@@ -29,6 +29,11 @@
 # df=pd.read_excel("employee.xlsx",sheet_name='average_of_salary',engine='openpyxl')
 # print(df)
 
+# install pandas via pip 
+# pip install pandas
+# pip show pandas
+# pip install openpyxl
+
 import pandas as pd
 try:
     df=pd.read_excel("employee.xlsx",engine='openpyxl')
