@@ -53,23 +53,41 @@ print(students)
 5. **Handles different data types** - A DataFrame can contain integers, floating-point values, strings, Boolean values, dates, and categorical data in different columns.
 6. **Missing-data handling** - It can detect, remove, replace, and interpolate missing values such as `NaN`.
 7. **Data cleaning** - It supports removing duplicates, changing data types, renaming columns, and correcting inconsistent data.
+
 8. **Data selection and filtering** - Data can be selected by labels, positions, conditions, or expressions using `.loc`, `.iloc`, and Boolean indexing.
+
 9. **Data alignment** - Pandas automatically aligns data by row and column labels during many operations.
+
 10. **Easy importing and exporting** - It can read and write CSV, Excel, JSON, SQL, HTML, Parquet, and other formats.
+
 11. **Efficient data manipulation** - It supports sorting, grouping, aggregation, transformation, pivoting, reshaping, and ranking.
+
 12. **GroupBy operations** - Data can be divided into groups and summarized using functions such as `sum()`, `mean()`, `count()`, and `max()`.
+
 13. **Combining datasets** - It provides `merge()`, `join()`, and `concat()` for combining tables.
+
 14. **Time-series support** - It supports dates, timestamps, date ranges, resampling, shifting, rolling windows, and time-based indexing.
+
 15. **Vectorized operations** - Operations are applied to complete columns or arrays efficiently without writing many explicit loops.
+
 16. **Descriptive statistics** - Functions such as `mean()`, `median()`, `std()`, `describe()`, and `value_counts()` help summarize data.
+
 17. **Hierarchical indexing** - MultiIndex allows multiple index levels for complex data analysis.
+
 18. **Reshaping support** - Data can be converted between wide and long formats using `pivot()`, `pivot_table()`, `melt()`, and `stack()`.
+
 19. **Categorical data support** - Repeated text values can be stored as categories to improve memory usage and analysis.
+
 20. **Visualization integration** - Pandas provides basic plotting through Matplotlib.
+
 21. **SQL-like functionality** - Filtering, grouping, joining, and aggregation resemble common SQL operations.
+
 22. **Extensible ecosystem** - It works with NumPy, Matplotlib, Seaborn, Scikit-learn, Jupyter, and database tools.
+
 23. **Interactive use** - It is especially convenient in Jupyter Notebook and other interactive environments.
+
 24. **Memory efficient options** - Appropriate data types, categorical columns, and chunked reading can reduce memory usage.
+
 25. **Programmable and reproducible** - Data preparation steps can be written as Python programs or analysis notebooks.
 
 ## Common Pandas Operations
