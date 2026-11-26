@@ -47,11 +47,17 @@ print(students)
 ## Characteristics of Pandas
 
 1. **Open source** - Pandas is free to use and has a large developer community.
+
 2. **Python-based** - It integrates naturally with Python syntax and tools.
+
 3. **Powerful data structures** - It provides `Series` and `DataFrame` objects.
+
 4. **Labelled data** - Rows and columns can have meaningful labels instead of only numeric positions.
+
 5. **Handles different data types** - A DataFrame can contain integers, floating-point values, strings, Boolean values, dates, and categorical data in different columns.
+
 6. **Missing-data handling** - It can detect, remove, replace, and interpolate missing values such as `NaN`.
+
 7. **Data cleaning** - It supports removing duplicates, changing data types, renaming columns, and correcting inconsistent data.
 
 8. **Data selection and filtering** - Data can be selected by labels, positions, conditions, or expressions using `.loc`, `.iloc`, and Boolean indexing.

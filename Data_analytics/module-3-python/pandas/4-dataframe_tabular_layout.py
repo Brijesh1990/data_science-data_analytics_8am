@@ -2,6 +2,7 @@
 # Data frame provides structured type of data
 
 import pandas as pd 
+
 import matplotlib.pyplot as mlt
 import openpyxl
 data = {
